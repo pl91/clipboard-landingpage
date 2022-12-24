@@ -1,0 +1,21 @@
+.info-2 {
+    grid-column: middle-start / middle-end;
+    @include flex;
+    gap: 6.4rem;
+    margin-top: 18.6rem;
+    align-items: center;
+
+    @media only screen and (min-width: $bp-l) {
+        margin-top: 15rem;
+        gap: 10rem;
+      }
+
+    &__heading {
+        @include flex;
+        gap: 1.6rem;
+
+        @media only screen and (min-width: $bp-l) {
+            gap: 1.9rem;
+          }
+    }
+}

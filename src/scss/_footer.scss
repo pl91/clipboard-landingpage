@@ -1,0 +1,73 @@
+.footer {
+  background-color: rgb(158, 171, 178, 0.1);
+
+  &__content {
+    grid-column: middle-start / middle-end;
+
+    @media only screen and (min-width: $bp-l) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14rem;
+    }
+
+    .image-box {
+      margin: 4rem auto;
+      margin-top: 5.2rem;
+      max-width: 5.5rem;
+
+      @media only screen and (min-width: $bp-l) {
+        margin: 0;
+      }
+    }
+
+    .links {
+      @include flex;
+      gap: 2rem;
+
+      @media only screen and (min-width: $bp-l) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin-left: -6.5rem;
+        gap: 2vw;
+      }
+
+      @media only screen and (min-width: $bp-xl) {
+        gap: 5vw;
+      };
+
+      &__group {
+        @include flex;
+        gap: 2rem;
+
+        a:hover {
+          color: #26BBA4;
+        }
+
+        @media only screen and (min-width: $bp-l) {
+            align-items: flex-start;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin: 5rem 0;
+      min-width: fit-content;
+      align-items: center;
+
+      a > img:hover {
+        filter: invert(62%) sepia(20%) saturate(1401%) hue-rotate(121deg) brightness(96%) contrast(88%);
+      }
+
+      @media only screen and (min-width: $bp-l) {
+        gap: 2.4rem;
+        margin: 6.3rem 0;
+        justify-self: flex-end;
+      }
+    }
+  }
+}

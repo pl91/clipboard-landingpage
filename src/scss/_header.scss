@@ -1,0 +1,42 @@
+.header {
+  grid-column: full-start / full-end;
+
+  &__hero {
+    grid-column: full-start / full-end;
+    background-image: url(../../assets/bg-header-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 12.3rem;
+    display: flex;
+    justify-content: center;
+
+    .image-box {
+      min-width: max-content;
+    }
+
+    @media only screen and (min-width: $bp-s) {
+      background-image: url(../../assets/bg-header-desktop.png);
+    }
+  }
+
+  &__text {
+    grid-column: middle-start / middle-end;
+
+    @include flex;
+    gap: 1.6rem;
+    margin-top: -6rem;
+    justify-self: center;
+
+    .cta {
+        @include flex;
+        gap: 2.4rem;
+        margin-top: 3rem;
+        margin-bottom: 0;
+
+        @media only screen and (min-width: $bp-m) {
+          flex-direction: row;
+          justify-content: center;
+        }
+    }
+  }
+}

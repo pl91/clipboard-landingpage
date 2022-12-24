@@ -1,0 +1,47 @@
+.info-3 {
+    grid-column: middle-start / middle-end;
+    @include flex;
+    gap: 9rem;
+    margin-top: 11.5rem;
+    align-items: center;
+    
+    
+    &__heading {
+        @include flex;
+        gap: 1.1rem;
+        @media only screen and (min-width: $bp-l) {
+            gap: 1.9rem;
+          }
+    }
+
+    &__text {
+        @include flex;
+        gap: 5.6rem;
+        align-items: center;
+
+        @media only screen and (min-width: $bp-l) {
+            flex-direction: row;
+            align-items: baseline;
+            // gap: 0;
+            justify-content: center;
+            justify-content: space-between;
+          }
+
+        .text-block {
+            @include flex;
+            gap: 1.8rem;
+            max-width: 60%;
+
+            @media only screen and (min-width: $bp-l) {
+                width: 33%;
+              }
+
+            .icon-box{
+                flex-basis: 33%;
+                margin: 0 auto;
+                max-width: fit-content;
+                margin-bottom: 2.6rem;
+            }
+        }
+    }
+}

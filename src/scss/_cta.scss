@@ -1,0 +1,25 @@
+.cta {
+    grid-column: middle-start / middle-end;
+    margin: 17rem 0;
+
+
+
+    &__heading {
+
+        .body {
+            margin: 0 auto;
+            margin-top: 1.6rem;
+            margin-bottom: 4.6rem;
+        }
+    }
+
+    &__buttons {
+        @include flex;
+        gap: 2.4rem;
+
+        @media only screen and (min-width: $bp-m) {
+            flex-direction: row;
+            justify-content: center;
+          }
+    }
+}
